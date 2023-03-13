@@ -14,7 +14,7 @@ My projects for study Vue.Js
 - `Métodos`;
 - `Eventos`;
  
-# :pushpin: O que estou estudando?
+# :pushpin: Aprendizados
 ```
 01 - Primeiro Componente;
 02 - Métodos created / mounted;
