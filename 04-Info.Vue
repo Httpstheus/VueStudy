@@ -9,6 +9,9 @@
             <li>PHP</li>
             <li>SQL</li>
         </ul>
+        <div>
+                <button @click="showEmail"> {{ textoBotao }}</button>
+        </div>
         <p v-if=" 4 > 2"> 4 é maior que 2</p>
         <p v-else> 4 não é maior</p>
         <p v-show="mostrar_email">Entre em contato pelo email: {{ email }}</p>
@@ -29,9 +32,20 @@
         data() {
             return {
                 esta_trabalhando: false,
-                mostrar_email: true,
+                mostrar_email: false,
                 email: 'matheusrodrigues@mundialeditora.com',
-                meu_link: 'https://matheusrodriguesdev.vercel.app/'
+                meu_link: 'https://matheusrodriguesdev.vercel.app/',
+                textoBotao: 'mostrar email'
+            }
+        },
+        methods: {
+            showEmail(){
+                this.mostrar_email = !this.mostrar_email
+                if(!this.mostrar_email) {
+                    this.textoBotao ='Mostrar Email'
+                } else {
+                    this.textoBotao = 'Esconder Email'
+                }
             }
         }
     }
