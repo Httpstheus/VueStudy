@@ -7,8 +7,8 @@
 </template>
 
 <script>
-    import Info from './Info'
-    import Form from './Form'
+    import Info from './04 - Info'
+    import Form from './05 - Form'
     
     export default {
         name: 'Pessoa',
