@@ -1,6 +1,7 @@
 <template>
 
-    <div>
+<div>
+    <p>{{ compEmail }}</p>
         <p v-if="esta_trabalhando">Estou trabalhando no momento</p>
         <p v-else>Estou em busca de novas oportunidades</p>
         <p>Utilizo as seguintes tecnologias para backend </p>
@@ -21,23 +22,26 @@
         <p v-show="mostrar_email">Entre em contato pelo email: {{ email }}</p>
         <p class="p-text">Para acessar meu portfólio basta <a v-bind:href="meu_link" target="_blank">clique aqui</a></p>
         <Picture/>
-    </div>
+</div>
 
 </template>
 
 
 <script>
-    import Picture from './08 - Picture'
+  import Picture from './08 - Picture'
     export default {
         name: 'Info',
         components: {
             Picture
         },
+        props: {
+            compEmail: string
+        },
         data() {
             return {
                 esta_trabalhando: false,
                 mostrar_email: false,
-                email: 'matheusrodrigues@mundialeditora.com',
+                email: 'matheus@gmail.com',
                 meu_link: 'https://matheusrodriguesdev.vercel.app/',
                 textoBotao: 'mostrar email',
                 backend_tecnologies: ['JavaScript', 'PHP', 'Python'],
@@ -59,4 +63,5 @@
             }
         }
     }
-</script>
+
+    </script>
