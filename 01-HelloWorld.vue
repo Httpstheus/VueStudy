@@ -8,7 +8,7 @@
 
 <script>
  
-  import MultiplosEventos from './MultiplosEventos';
+  import MultiplosEventos from './10 - MultiplosEventos';
 
 export default {
 
